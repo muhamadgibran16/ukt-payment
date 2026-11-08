@@ -1,0 +1,14 @@
+{
+  "name": "sevima-mock-payment-gateway",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mock payment gateway: mengirim webhook payment.success / payment.expired bertanda tangan HMAC-SHA256.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.mjs",
+    "send": "node --env-file-if-exists=.env src/cli.mjs"
+  }
+}

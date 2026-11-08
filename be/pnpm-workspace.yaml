@@ -1,0 +1,12 @@
+# Konfigurasi pnpm (project tunggal, bukan monorepo).
+
+# Paket yang boleh/tidak boleh menjalankan install script (pnpm 10 memblokir secara default).
+# - @parcel/watcher: dipakai Jest, sudah ada binary prebuilt.
+# - @scarf/scarf: telemetri dari swagger-ui.
+ignoredBuiltDependencies:
+  - '@parcel/watcher'
+  - '@scarf/scarf'
+
+# Paksa versi dependency transitif yang sudah ditambal (GHSA-q7qp-rjg7-q26m).
+overrides:
+  multer: ^2.5.0
